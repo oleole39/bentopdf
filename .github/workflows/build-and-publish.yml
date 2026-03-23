@@ -12,7 +12,6 @@ jobs:
   # New job to build dist and create release
   build-and-release:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
     permissions:
       contents: write
     env:
