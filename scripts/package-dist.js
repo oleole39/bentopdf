@@ -15,7 +15,8 @@ const isSimpleMode = (buildOutputDirName === "dist-simple") ? true : false;
 
 // Run the build command
 try {
-  execSync(`SIMPLE_MODE=${isSimpleMode} run build`, { stdio: 'inherit' });
+  execSync(`SIMPLE_MODE=${isSimpleMode} npm run build`, { stdio: 'inherit' });
+
   console.log('✅ Build completed successfully');
 } catch (error) {
   console.error('❌ Build failed:', error.message);
